@@ -143,7 +143,8 @@
 </head>
 <body>
 
-<button class="menu-btn" onclick="toggleMenu()">☰ Menu</button>
+<button class="menu-btn" 
+onclick="toggleMenu()" id="menuToggle">☰ Menu</button>
 <nav id="sideMenu">
   <a href="#home">Início</a>
   <a href="#sobre">Sobre</a>
@@ -239,6 +240,21 @@
 <script>
   function toggleMenu() {
     document.getElementById("sideMenu").classList.toggle("show");
+  }
+</script>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    const toggleBtn = document.getElementById("menuToggle");
+    menu.classList.toggle("show");
+
+    // Alterna entre ☰ e ✖
+    if (menu.classList.contains("show")) {
+      toggleBtn.innerText = "✖ Fechar";
+    } else {
+      toggleBtn.innerText = "☰ Menu";
+    }
   }
 </script>
 
