@@ -257,5 +257,27 @@
   });
 </script>
 
+  <script>
+  function toggleMenu() {
+    const menu = document.getElementById("sideMenu");
+    const toggleBtn = document.getElementById("menuToggle");
+    menu.classList.toggle("show");
+    toggleBtn.innerText = menu.classList.contains("show") ? "✖ Fechar" : "☰ Menu";
+  }
+
+  // Fecha o menu ao clicar em qualquer link
+  document.querySelectorAll('#sideMenu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById("sideMenu").classList.remove("show");
+      document.getElementById("menuToggle").innerText = "☰ Menu";
+    });
+  });
+
+  // Garante que a página sempre comece do topo
+  window.onload = () => {
+    window.scrollTo(0, 0);
+  };
+</script>
+
 </body>
 </html>
