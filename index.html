@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SentinelTech - Segurança Eletrônica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4eee2;
+      color: #1b5e20;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #145219;
+      color: #f4eee2;
+      text-align: center;
+      padding: 20px;
+    }
+    header img {
+      max-width: 150px;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0d3d14;
+      flex-wrap: wrap;
+    }
+    nav button {
+      background-color: transparent;
+      border: none;
+      color: #f4eee2;
+      padding: 14px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    nav button:hover {
+      background-color: #145219;
+    }
+    .tab-content {
+      display: none;
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .tab-content.active {
+      display: block;
+    }
+    footer {
+      background-color: #f4eee2;
+      color: #145219;
+      text-align: center;
+      padding: 20px;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 20px;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      border: 2px solid #f4eee2;
+    }
+    a {
+      color: #1b5e20;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="imagens/logo_sentineltech.png" alt="Logo SentinelTech">
+  <h1>SentinelTech</h1>
+  <p>Tecnologia que protege. Vigilância que tranquiliza.</p>
+</header>
+
+<nav>
+  <button onclick="showTab('sobre')">Sobre</button>
+  <button onclick="showTab('servicos')">Serviços</button>
+  <button onclick="showTab('depoimentos')">Depoimentos</button>
+  <button onclick="showTab('orcamento')">Orçamento</button>
+  <button onclick="showTab('certificacoes')">Certificações</button>
+  <button onclick="showTab('mapa')">Localização</button>
+  <button onclick="showTab('blog')">Blog</button>
+  <button onclick="showTab('parceiros')">Parceiros</button>
+  <button onclick="showTab('contato')">Contato</button>
+</nav>
+
+<div id="sobre" class="tab-content active">
+  <h2>Sobre Nós</h2>
+  <p>A SentinelTech nasceu com o propósito de proteger o que é mais importante: você, sua família e seu negócio. Atuamos com sistemas de segurança modernos, priorizando qualidade, atendimento e tranquilidade.</p>
+</div>
+
+<div id="servicos" class="tab-content">
+  <h2>Serviços</h2>
+  <ul>
+    <li>Instalação de câmeras de segurança (CFTV)</li>
+    <li>Campainhas inteligentes com vídeo</li>
+    <li>Alarmes e sensores de presença</li>
+    <li>Cabeamento estruturado</li>
+    <li>Manutenção de sistemas</li>
+  </ul>
+  <h3>Galeria de Serviços Realizados</h3>
+  <div class="gallery">
+    <img src="imagens/servico01.jpg" alt="Serviço 1" />
+    <img src="imagens/servico02.jpg" alt="Serviço 2" />
+  </div>
+</div>
+
+<div id="depoimentos" class="tab-content">
+  <h2>Depoimentos</h2>
+  <blockquote>"Serviço excelente, instalação rápida e equipe muito atenciosa!" – João M.</blockquote>
+  <blockquote>"Senti muito mais segurança depois que contratei a SentinelTech!" – Ana R.</blockquote>
+</div>
+
+<div id="orcamento" class="tab-content">
+  <h2>Solicite um Orçamento</h2>
+  <form action="mailto:guilhermedasilva1081@gmail.com" method="post" enctype="text/plain">
+    <label>Nome:</label><br>
+    <input type="text" name="nome" required><br>
+    <label>Email:</label><br>
+    <input type="email" name="email" required><br>
+    <label>Mensagem:</label><br>
+    <textarea name="mensagem" rows="5" required></textarea><br>
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<div id="certificacoes" class="tab-content">
+  <h2>Certificações e Garantias</h2>
+  <p>Trabalhamos com equipamentos homologados pela Anatel e fornecemos garantia de 1 ano em todas as instalações.</p>
+</div>
+
+<div id="mapa" class="tab-content">
+  <h2>Onde Estamos</h2>
+  <iframe src="https://www.google.com/maps?q=Fortaleza,CE&output=embed" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
+</div>
+
+<div id="blog" class="tab-content">
+  <h2>Blog: Dicas de Segurança</h2>
+  <ul>
+    <li><strong>Como escolher a câmera ideal para sua casa</strong></li>
+    <li><strong>Vantagens das campainhas inteligentes</strong></li>
+    <li><strong>Cuidados com segurança em condomínios</strong></li>
+  </ul>
+</div>
+
+<div id="parceiros" class="tab-content">
+  <h2>Parceiros e Fornecedores</h2>
+  <div class="gallery">
+    <img src="imagens/logo_intelbras.png" alt="Intelbras">
+    <img src="imagens/logo_hikvision.png" alt="Hikvision">
+    <img src="imagens/logo_multilaser.png" alt="Multilaser">
+  </div>
+</div>
+
+<div id="contato" class="tab-content">
+  <h2>Contato</h2>
+  <p>WhatsApp: <a href="https://wa.me/5585996656068" target="_blank">+55 (85) 9 9665-6068</a></p>
+  <p>Email: <a href="mailto:guilhermedasilva1081@gmail.com">guilhermedasilva1081@gmail.com</a></p>
+  <p>Cidade: Fortaleza - CE</p>
+</div>
+
+<footer>
+  &copy; 2025 SentinelTech. Todos os direitos reservados.
+</footer>
+
+<script>
+  function showTab(tabId) {
+    document.querySelectorAll('.tab-content').forEach(tab => {
+      tab.classList.remove('active');
+    });
+    document.getElementById(tabId).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
