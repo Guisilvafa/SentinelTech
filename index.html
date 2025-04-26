@@ -3,8 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SentinelTech - Segurança Eletrônica</title>
+  <title>SentinelTech - Segurança Eletrônica em Fortaleza</title>
+
+  <!-- SEO otimizado -->
+  <meta name="description" content="A SentinelTech oferece instalação de câmeras de segurança, alarmes, campainhas inteligentes e cabeamento estruturado em Fortaleza. Proteja o que importa com qualidade e confiança!">
+  <meta name="keywords" content="segurança eletrônica, câmeras de segurança, instalação de câmeras Fortaleza, alarmes, cabeamento estruturado, SentinelTech, empresa de segurança, campainhas inteligentes, vigilância eletrônica">
+  <meta name="author" content="SentinelTech">
+  <meta name="robots" content="index, follow">
+
+  <!-- Ícone da aba -->
+  <link rel="icon" type="image/png" href="imagens/logo_sentineltech.png" />
+
+  <!-- Fonte bonita -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
@@ -243,29 +255,9 @@
     const menu = document.getElementById("sideMenu");
     const toggleBtn = document.getElementById("menuToggle");
     menu.classList.toggle("show");
-
-    // Alterna o texto do botão
     toggleBtn.innerText = menu.classList.contains("show") ? "✖ Fechar" : "☰ Menu";
   }
 
-  // Fecha o menu ao clicar em qualquer link
-  document.querySelectorAll('#sideMenu a').forEach(link => {
-    link.addEventListener('click', () => {
-      document.getElementById("sideMenu").classList.remove("show");
-      document.getElementById("menuToggle").innerText = "☰ Menu";
-    });
-  });
-</script>
-
-  <script>
-  function toggleMenu() {
-    const menu = document.getElementById("sideMenu");
-    const toggleBtn = document.getElementById("menuToggle");
-    menu.classList.toggle("show");
-    toggleBtn.innerText = menu.classList.contains("show") ? "✖ Fechar" : "☰ Menu";
-  }
-
-  // Fecha o menu ao clicar em qualquer link
   document.querySelectorAll('#sideMenu a').forEach(link => {
     link.addEventListener('click', () => {
       document.getElementById("sideMenu").classList.remove("show");
@@ -273,7 +265,6 @@
     });
   });
 
-  // Garante que a página sempre comece do topo
   window.onload = () => {
     window.scrollTo(0, 0);
   };
